@@ -34,6 +34,7 @@ AWS选的是新加坡节点，裸ping 100ms多延迟（图一），相比阿里�
 
 
 图二：连上lab环境后，延迟很低。
+
 ![图片](https://github.com/tuxsec/-blog/assets/26221848/6e83ffb1-0432-4e67-929a-dbe0699a4d83)
 
 
