@@ -27,27 +27,17 @@ Typora:
 
 然后就是附带一个md转pdf工具，这是个命令行工具。pandoc，它可以把上面保存的.md文件转换成pdf，效果很好，这是在找考试报告模板的时候找到的，链接如下https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/src/OSED-exam-report-template_epi_v1.md ，链接里面也有自动生成考试报告的脚本，pandoc从模板到pdf的使用方法如下：
 
-#!/bin/bash
-
- pandoc ./OSED-exam-report.md \
-
--o ./OSED-OS-xxxx-Exam-Report.pdf \
-
---from markdown+yaml_metadata_block+raw_html \
-
---template eisvogel \
-
---table-of-contents \
-
---toc-depth 6 \
-
---number-sections \
-
---top-level-division=chapter \
-
---highlight-style breezedark \
-
---resource-path=.:src
+    #!/bin/bash
+    pandoc ./OSED-exam-report.md \
+    -o ./OSED-OS-xxxx-Exam-Report.pdf \
+    --from markdown+yaml_metadata_block+raw_html \
+    --template eisvogel \
+    --table-of-contents \
+    --toc-depth 6 \
+    --number-sections \
+    --top-level-division=chapter \
+    --highlight-style breezedark \
+    --resource-path=.:src
 
 打包成bash脚本的pandoc：
 
